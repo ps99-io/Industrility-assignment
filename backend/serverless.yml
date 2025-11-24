@@ -7,8 +7,8 @@ provider:
   environment:
     BUCKET_NAME: genai-doc-generate
     PINECONE_INDEX: llama-text-embed-v2-index
-    PINECONE_API_KEY: "pcsk_4TLfWS_4nPiWWzQnCq85YbxDpiP4DM6Ncj69mKZZSRmQ6gjyqoyqfcq13DnuLTQ6TJCsc7"
-    GOOGLE_API_KEY: "AIzaSyDi0n--8-vkBdhFCG_Z639hiqib1GSHfl4"
+    PINECONE_API_KEY: ""
+    GOOGLE_API_KEY: ""
   httpApi:
     cors: true
 
@@ -51,7 +51,7 @@ functions:
 
   generate:
     handler: handler.generate
-    timeout: 30
+    timeout: 300
     iam:
       role:
         statements: # Inline policy statements added to this function's dedicated role

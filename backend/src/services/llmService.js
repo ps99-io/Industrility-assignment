@@ -34,10 +34,8 @@ const { HumanMessage } = require("@langchain/core/messages");
 
 const model = new ChatGoogleGenerativeAI({
   model: "gemini-2.5-flash",
-  maxOutputTokens: 3000, // Optional: Adjust as needed
+  maxOutputTokens: 60000,
   apiKey: process.env.GOOGLE_API_KEY,
-
-  // Add other configuration options if required
 });
 
 const queryLLM = async (prompt) => {
